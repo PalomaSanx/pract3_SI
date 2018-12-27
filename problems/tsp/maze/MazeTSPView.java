@@ -184,7 +184,7 @@ public class MazeTSPView extends JPanel implements ProblemView{
 			// Waits 0.05 seconds
 			repaint();
 			try {
-				Thread.sleep(50);
+				Thread.sleep(100);
 			} catch (InterruptedException e) {}
 		}	
 		posHamster = newPosHamster;

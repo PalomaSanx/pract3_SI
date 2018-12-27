@@ -69,10 +69,10 @@ public class MazeTSP extends TSP implements ProblemVisualizable {
 			} else {
 				pos_x = pos_x2;
 				pos_y = pos_y2;
-				pos_x2 = this.posAgent.x;
-				pos_y2 = this.posAgent.y;
+				pos_x2 = this.posExit.x;
+				pos_y2 = this.posExit.y;
 			}
-			dist_manh = dist_manh + Math.sqrt(Math.pow((pos_x - pos_x2), 2) + Math.pow((pos_y - pos_y2), 2));
+			dist_manh = dist_manh + (Math.abs((pos_x - pos_x2)) + Math.abs(pos_y - pos_y2));
 
 		}
 
@@ -80,8 +80,8 @@ public class MazeTSP extends TSP implements ProblemVisualizable {
 		pos_x2 = posCities.get(secuencia[0]).x;
 		pos_y2 = posCities.get(secuencia[0]).y;
 		dist_manh = dist_manh
-				+ Math.sqrt(Math.pow((this.posAgent.x - pos_x2), 2) + Math.pow((this.posAgent.y - pos_y2), 2));
-		System.out.println("------------------->" + dist_manh);
+				+ (Math.abs((this.posAgent.x - pos_x2)) + Math.abs((this.posAgent.y - pos_y2)));
+		System.out.println("dist_manh------------------->" + dist_manh);
 		return dist_manh;
 	}
 

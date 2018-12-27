@@ -141,8 +141,8 @@ public class TSP extends OptimizationProblem implements ProblemVisualizable {
 			} else {
 				pos_x = pos_x2;
 				pos_y = pos_y2;
-				pos_x2 = this.posAgent.x;
-				pos_y2 = this.posAgent.y;
+				pos_x2 = this.posExit.x;
+				pos_y2 = this.posExit.y;
 			}
 			dist_eucli = dist_eucli + Math.sqrt(Math.pow((pos_x - pos_x2), 2) + Math.pow((pos_y - pos_y2), 2));
 
@@ -153,7 +153,7 @@ public class TSP extends OptimizationProblem implements ProblemVisualizable {
 		pos_y2 = posCities.get(secuencia[0]).y;
 		dist_eucli = dist_eucli
 				+ Math.sqrt(Math.pow((this.posAgent.x - pos_x2), 2) + Math.pow((this.posAgent.y - pos_y2), 2));
-		System.out.println("------------------->" + dist_eucli);
+		System.out.println("dis-eucli------------------->" + dist_eucli);
 		return dist_eucli;
 	}
 
