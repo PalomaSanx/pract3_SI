@@ -9,7 +9,7 @@ import optimization.OptimizationAlgorithm;
 
 public class HillClimbing extends OptimizationAlgorithm {
 
-	protected double k; // valor entre [0-1]
+	protected double k; //nº de vecinos
 
 	@Override
 	public void search() {
@@ -31,6 +31,7 @@ public class HillClimbing extends OptimizationAlgorithm {
 		// TODO Auto-generated method stub
 		// muestra los resultados particulares de un algoritmo (generaciones,nº de
 		// mutaciones, permutaciones, etc).
+		System.out.println("nº de vecinos generados: "+k);
 
 	}
 
